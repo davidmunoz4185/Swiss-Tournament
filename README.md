@@ -27,9 +27,8 @@ https://www.vagrantup.com/downloads.html
 
 #### Setup it!!!
 
-`vagrant up`
-`vagrant ssh`
-`
+	$ vagrant up
+	$ vagrant ssh
 
 #### Runt it!!!
 
@@ -40,24 +39,24 @@ It is almost done, just 2 steps:
 
 ##### Init DataBase
 
-cd /vagrant/tournamet
-$ psql
-psql (9.3.15)
-Type "help" for help.
+	$ cd /vagrant/tournamet
+	$ psql
+	psql (9.3.15)
+	Type "help" for help.
 
-vagrant=> \i tournament.sql
-DROP DATABASE
-CREATE DATABASE
-You are now connected to database "tournament" as user "vagrant".
-CREATE TABLE
-CREATE TABLE
-CREATE VIEW
-tournament=>
-tournament=>
-tournament=> \q
+	vagrant=> \i tournament.sql
+	DROP DATABASE
+	CREATE DATABASE
+	You are now connected to database "tournament" as user "vagrant".
+	CREATE TABLE
+	CREATE TABLE
+	CREATE VIEW
+	tournament=>
+	tournament=>
+	tournament=> \q
 
 ##### Run Test
 
-`python tournament_test.py`
+	$ python tournament_test.py`
 
 
