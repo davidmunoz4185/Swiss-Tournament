@@ -62,7 +62,7 @@ def countPlayers():
     """
 
     db_connect, cursor = connect()
-    query = ("SELECT count(players.player_id) AS player_count FROM players;")
+    query = ("SELECT count(*) AS player_count FROM players;")
     cursor.execute(query)
     player_count = cursor.fetchone()[0]
     db_connect.close()

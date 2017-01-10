@@ -21,7 +21,7 @@ CREATE DATABASE tournament;
 
 CREATE TABLE players (
         player_id serial PRIMARY KEY,
-        player_name varchar (25) NOT NULL
+        player_name varchar (50) NOT NULL
 );
 
 
@@ -30,8 +30,8 @@ CREATE TABLE players (
 
 CREATE TABLE results (
         match_id serial PRIMARY KEY,
-        match_winner integer REFERENCES players(player_id) NOT NULL,
-        match_loser integer REFERENCES players(player_id) NOT NULL
+        match_winner integer REFERENCES players(player_id) ON DELETE CASCADE,
+        match_loser integer REFERENCES players(player_id) ON DELETE CASCADE
 );
 
 -- Creates a view standings table, that will be sorted by total_wins
